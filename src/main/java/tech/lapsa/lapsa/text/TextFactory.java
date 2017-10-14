@@ -31,7 +31,7 @@ public final class TextFactory {
 	return new TextModelBuilder();
     }
 
-    public static class TextModelBuilder {
+    public final static class TextModelBuilder {
 	private Map<String, Object> bindings = new HashMap<>();
 
 	private TextModelBuilder() {
@@ -85,7 +85,7 @@ public final class TextFactory {
 	return new TextTemplateBuilder();
     }
 
-    public static class TextTemplateBuilder {
+    public final static class TextTemplateBuilder {
 	private Charset inputEncoding;
 
 	private TextTemplateBuilder() {
