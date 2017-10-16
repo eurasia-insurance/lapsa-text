@@ -16,19 +16,19 @@ public final class DisplayTool {
 
     public String normal(Localized entity) {
 	return MyOptionals.of(entity) //
-		.map(x -> x.displayName(locale)) //
+		.map(x -> x.regular(locale)) //
 		.orElse(null);
     }
 
     public String few(Localized entity) {
 	return MyOptionals.of(entity) //
-		.map(x -> x.displayNameShort(locale)) //
+		.map(x -> x.few(locale)) //
 		.orElse(null);
     }
 
     public String full(Localized entity) {
 	return MyOptionals.of(entity) //
-		.map(x -> x.displayNameFull(locale)) //
+		.map(x -> x.full(locale)) //
 		.orElse(null);
     }
 }

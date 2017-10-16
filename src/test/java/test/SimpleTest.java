@@ -52,7 +52,7 @@ public class SimpleTest {
 
     static class TestEntity implements Localized {
 	@Override
-	public String displayName(DisplayNameVariant variant, Locale locale) {
+	public String localized(LocalizationVariant variant, Locale locale) {
 	    return variant + " " + locale;
 	}
     }
