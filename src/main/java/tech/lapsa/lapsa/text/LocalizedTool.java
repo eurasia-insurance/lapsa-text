@@ -6,15 +6,15 @@ import tech.lapsa.java.commons.function.MyObjects;
 import tech.lapsa.java.commons.function.MyOptionals;
 import tech.lapsa.java.commons.localization.Localized;
 
-public final class DisplayTool {
+public final class LocalizedTool {
 
     private final Locale locale;
 
-    DisplayTool(Locale locale) {
+    LocalizedTool(Locale locale) {
 	this.locale = MyObjects.requireNonNull(locale, "locale");
     }
 
-    public String normal(Localized entity) {
+    public String regular(Localized entity) {
 	return MyOptionals.of(entity) //
 		.map(x -> x.regular(locale)) //
 		.orElse(null);

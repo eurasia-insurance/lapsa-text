@@ -43,7 +43,7 @@ public final class TextFactory {
 	    bindings.put("locale", locale);
 	    bindings.put("lang", locale.getLanguage());
 	    bindings.put("date", new DateTool(locale));
-	    bindings.put("display", new DisplayTool(locale));
+	    bindings.put("localized", new LocalizedTool(locale));
 	    return this;
 	}
 
