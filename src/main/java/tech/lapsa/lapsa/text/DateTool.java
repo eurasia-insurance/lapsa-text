@@ -101,27 +101,27 @@ public final class DateTool {
 		.orElse(null);
     }
 
-    // normal
+    // regular
 
-    public String normal(Instant instant) {
+    public String regular(Instant instant) {
 	return MyOptionals.of(instant) //
 		.map(x -> normalTimestamp.format(LocalDateTime.ofInstant(x, ZoneId.systemDefault()))) //
 		.orElse(null);
     }
 
-    public String normal(LocalDate localDate) {
+    public String regular(LocalDate localDate) {
 	return MyOptionals.of(localDate) //
 		.map(x -> normalDate.format(x)) //
 		.orElse(null);
     }
 
-    public String normal(LocalDateTime localDateTime) {
+    public String regular(LocalDateTime localDateTime) {
 	return MyOptionals.of(localDateTime) //
 		.map(x -> normalTimestamp.format(x)) //
 		.orElse(null);
     }
 
-    public String normal(LocalTime localTime) {
+    public String regular(LocalTime localTime) {
 	return MyOptionals.of(localTime) //
 		.map(x -> normalTime.format(x)) //
 		.orElse(null);
