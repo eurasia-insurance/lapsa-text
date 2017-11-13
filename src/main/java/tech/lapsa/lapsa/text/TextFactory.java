@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Properties;
 
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
@@ -61,8 +62,21 @@ public final class TextFactory {
 	}
 
 	public TextModelBuilder bindOptional(String name, Optional<?> optional) {
-	    MyObjects.requireNull(optional, "optional") //
+	    MyObjects.requireNonNull(optional, "optional") //
 		    .ifPresent(x -> bind(name, x));
+	    return this;
+	}
+
+	public TextModelBuilder bindProperties(Properties properties) {
+	    MyObjects.requireNonNull(properties, "properties") //
+		    .entrySet() //
+		    .stream() //
+		    .forEach(x -> {
+			try {
+			    bind(x.getKey().toString(), x.getValue());
+			} catch (IllegalStateException ignored) {
+			}
+		    });
 	    return this;
 	}
 
