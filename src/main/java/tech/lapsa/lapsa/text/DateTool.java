@@ -30,7 +30,7 @@ public final class DateTool {
     private final DateTimeFormatter fewTimestamp;
     private final DateTimeFormatter fewDate;
 
-    DateTool(Locale locale) {
+    DateTool(final Locale locale) {
 	normalTime = df(null, NORMAL_STYLE, locale);
 	normalTimestamp = df(NORMAL_STYLE, NORMAL_STYLE, locale);
 	normalDate = df(NORMAL_STYLE, null, locale);
@@ -44,32 +44,32 @@ public final class DateTool {
 	fewDate = df(FEW_STYLE, null, locale);
     }
 
-    private static DateTimeFormatter df(FormatStyle dateStyle, FormatStyle timeStyle, Locale locale) {
+    private static DateTimeFormatter df(final FormatStyle dateStyle, final FormatStyle timeStyle, final Locale locale) {
 	return new DateTimeFormatterBuilder().appendLocalized(dateStyle, timeStyle).toFormatter(locale);
 
     }
 
     // full
 
-    public String full(Instant instant) {
+    public String full(final Instant instant) {
 	return MyOptionals.of(instant) //
 		.map(x -> fullTimestamp.format(LocalDateTime.ofInstant(x, ZoneId.systemDefault()))) //
 		.orElse(null);
     }
 
-    public String full(LocalDate localDate) {
+    public String full(final LocalDate localDate) {
 	return MyOptionals.of(localDate) //
 		.map(x -> fullDate.format(x)) //
 		.orElse(null);
     }
 
-    public String full(LocalDateTime localDateTime) {
+    public String full(final LocalDateTime localDateTime) {
 	return MyOptionals.of(localDateTime) //
 		.map(x -> fullTimestamp.format(x)) //
 		.orElse(null);
     }
 
-    public String full(LocalTime localTime) {
+    public String full(final LocalTime localTime) {
 	return MyOptionals.of(localTime) //
 		.map(x -> fullTime.format(x)) //
 		.orElse(null);
@@ -77,25 +77,25 @@ public final class DateTool {
 
     // few
 
-    public String few(Instant instant) {
+    public String few(final Instant instant) {
 	return MyOptionals.of(instant) //
 		.map(x -> fewTimestamp.format(LocalDateTime.ofInstant(x, ZoneId.systemDefault()))) //
 		.orElse(null);
     }
 
-    public String few(LocalDate localDate) {
+    public String few(final LocalDate localDate) {
 	return MyOptionals.of(localDate) //
 		.map(x -> fewDate.format(x)) //
 		.orElse(null);
     }
 
-    public String few(LocalDateTime localDateTime) {
+    public String few(final LocalDateTime localDateTime) {
 	return MyOptionals.of(localDateTime) //
 		.map(x -> fewTimestamp.format(x)) //
 		.orElse(null);
     }
 
-    public String few(LocalTime localTime) {
+    public String few(final LocalTime localTime) {
 	return MyOptionals.of(localTime) //
 		.map(x -> fewTime.format(x)) //
 		.orElse(null);
@@ -103,25 +103,25 @@ public final class DateTool {
 
     // regular
 
-    public String regular(Instant instant) {
+    public String regular(final Instant instant) {
 	return MyOptionals.of(instant) //
 		.map(x -> normalTimestamp.format(LocalDateTime.ofInstant(x, ZoneId.systemDefault()))) //
 		.orElse(null);
     }
 
-    public String regular(LocalDate localDate) {
+    public String regular(final LocalDate localDate) {
 	return MyOptionals.of(localDate) //
 		.map(x -> normalDate.format(x)) //
 		.orElse(null);
     }
 
-    public String regular(LocalDateTime localDateTime) {
+    public String regular(final LocalDateTime localDateTime) {
 	return MyOptionals.of(localDateTime) //
 		.map(x -> normalTimestamp.format(x)) //
 		.orElse(null);
     }
 
-    public String regular(LocalTime localTime) {
+    public String regular(final LocalTime localTime) {
 	return MyOptionals.of(localTime) //
 		.map(x -> normalTime.format(x)) //
 		.orElse(null);

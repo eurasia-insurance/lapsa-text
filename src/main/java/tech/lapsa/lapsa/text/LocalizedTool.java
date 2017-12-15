@@ -10,23 +10,23 @@ public final class LocalizedTool {
 
     private final Locale locale;
 
-    LocalizedTool(Locale locale) {
+    LocalizedTool(final Locale locale) {
 	this.locale = MyObjects.requireNonNull(locale, "locale");
     }
 
-    public String regular(Localized entity) {
+    public String regular(final Localized entity) {
 	return MyOptionals.of(entity) //
 		.map(x -> x.regular(locale)) //
 		.orElse(null);
     }
 
-    public String few(Localized entity) {
+    public String few(final Localized entity) {
 	return MyOptionals.of(entity) //
 		.map(x -> x.few(locale)) //
 		.orElse(null);
     }
 
-    public String full(Localized entity) {
+    public String full(final Localized entity) {
 	return MyOptionals.of(entity) //
 		.map(x -> x.full(locale)) //
 		.orElse(null);

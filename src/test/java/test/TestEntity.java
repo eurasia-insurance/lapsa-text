@@ -6,8 +6,10 @@ import tech.lapsa.java.commons.localization.Localized;
 
 public class TestEntity implements Localized {
 
+    private static final long serialVersionUID = 1L;
+
     @Override
-    public String localized(LocalizationVariant variant, Locale locale) {
+    public String localized(final LocalizationVariant variant, final Locale locale) {
 	return variant + " " + locale;
     }
 

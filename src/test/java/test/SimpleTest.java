@@ -12,16 +12,16 @@ import tech.lapsa.lapsa.text.TextFactory.TextModelBuilder;
 import tech.lapsa.lapsa.text.TextFactory.TextTemplateBuilder.TextTemplate;
 
 public class SimpleTest {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-	TextModelBuilder textModelBuilder = TextFactory.newModelBuilder()
+	final TextModelBuilder textModelBuilder = TextFactory.newModelBuilder()
 		.bind("instant", Instant.now())
 		.bind("localTime", LocalTime.now())
 		.bind("localDate", LocalDate.now())
 		.bind("localDateTime", LocalDateTime.now())
 		.bind("name", new TestEntity());
 
-	TextTemplate template = TextFactory.newTextTemplateBuilder().buildFromPattern(""
+	final TextTemplate template = TextFactory.newTextTemplateBuilder().buildFromPattern(""
 		+ "----------\n"
 		+ "$lang \n"
 		+ "----------\n"
@@ -51,8 +51,11 @@ public class SimpleTest {
     }
 
     static class TestEntity implements Localized {
+
+	private static final long serialVersionUID = 1L;
+
 	@Override
-	public String localized(LocalizationVariant variant, Locale locale) {
+	public String localized(final LocalizationVariant variant, final Locale locale) {
 	    return variant + " " + locale;
 	}
     }
