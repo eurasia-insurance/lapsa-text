@@ -9,7 +9,7 @@
 
 	<groupId>tech.lapsa.lapsa</groupId>
 	<artifactId>lapsa-text</artifactId>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2</version>
 	<packaging>jar</packaging>
 
 	<name>Lapsa Lib : Text tools</name>
@@ -78,7 +78,7 @@
 	<scm>
 		<connection>scm:git:https://gitlab.lapsa.tech/lapsa/lapsa/text.git</connection>
 		<developerConnection>scm:git:https://gitlab.lapsa.tech/lapsa/lapsa/text.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v1.2</tag>
 	</scm>
 
 	<issueManagement>
