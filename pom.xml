@@ -76,9 +76,9 @@
 	</dependencies>
 
 	<scm>
-		<connection>scm:git:https://gitlab.lapsa.tech/lapsa/lapsa/text.git</connection>
-		<developerConnection>scm:git:https://gitlab.lapsa.tech/lapsa/lapsa/text.git</developerConnection>
-		<tag>v1.2</tag>
+		<connection>scm:git:https://github.com/eurasia-insurance/lapsa-text.git</connection>
+		<developerConnection>scm:git:https://github.com/eurasia-insurance/lapsa-text.git</developerConnection>
+		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
