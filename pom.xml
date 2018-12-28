@@ -9,14 +9,14 @@
 
 	<groupId>tech.lapsa.lapsa</groupId>
 	<artifactId>lapsa-text</artifactId>
-	<version>1.2</version>
+	<version>CURRENT-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Lapsa Lib : Text tools</name>
 
 	<properties>
 		<!-- BOMS -->
-		<java-commons.version>1.3</java-commons.version>
+		<java-commons.version>CURRENT-SNAPSHOT</java-commons.version>
 		<!-- external -->
 		<velocity.version>1.7</velocity.version>
 		<velocity-tools.version>2.0</velocity-tools.version>
