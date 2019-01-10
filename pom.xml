@@ -9,7 +9,7 @@
 
 	<groupId>tech.lapsa.lapsa</groupId>
 	<artifactId>lapsa-text</artifactId>
-	<version>20190110</version>
+	<version>CURRENT-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Lapsa Lib : Text tools</name>
@@ -78,7 +78,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/eurasia-insurance/lapsa-text.git</connection>
 		<developerConnection>scm:git:https://github.com/eurasia-insurance/lapsa-text.git</developerConnection>
-		<tag>v20190110</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 </project>
