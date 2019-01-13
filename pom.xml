@@ -16,7 +16,7 @@
 
 	<properties>
 		<!-- BOMS -->
-		<java-commons.version>20190113r3</java-commons.version>
+		<java-commons.version>CURRENT-SNAPSHOT</java-commons.version>
 		<!-- external -->
 		<velocity.version>1.7</velocity.version>
 		<velocity-tools.version>2.0</velocity-tools.version>
